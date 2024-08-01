@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .sub-result {
+            background-color: red;
+            color: black;
+            font-size: 200px;
+            font-family: 'Curlz MT', cursive;
+            padding: 20px;
+        }
+        .default-result {
+            background-color: green;
+            color: white;
+            font-size: 150px;
+            font-family: 'Impact', sans-serif;
+            padding: 100px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.onload = function() {
+            var name = getQueryParam('name');
+            var outputElement = document.getElementById('output');
+
+            if (name === 'sub') {
+                outputElement.textContent = 'SUB';
+                outputElement.className = 'sub-result';
+                document.body.style.backgroundImage = "url('Subway-sub2.jpg')";
+
+            } else {
+                outputElement.textContent = 'da legend';
+                outputElement.className = 'default-result';
+                document.body.style.backgroundImage = "url('ethansmells.jpg')";
+            }
+        }
+    </script>
+</body>
+</html>

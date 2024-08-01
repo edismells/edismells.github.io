@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Your Name</title>
+    <style>
+        body {
+            font-family: 'comic sans ms', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 30px;
+        }
+        label {
+            font-size: 100px;
+            display: block;
+            margin-bottom:30px;
+        }
+    </style>
+</head>
+<br>
+</br>
+<body>
+    <div class="container">
+        <label for="nameInput">what is your name?</label><br>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="checkName()">Submit</button>
+    </div>
+
+    <script>
+        function checkName() {
+            var name = document.getElementById('nameInput').value.trim().toLowerCase();
+
+            if (name === 'zubayr' || name === 'zubu' || name === 'subu') {
+                // Redirect to the result page with a query parameter
+                window.location.href = 'result.htm?name=sub';
+            } else {
+                // Redirect to the result page with a different query parameter
+                window.location.href = 'result.htm?name=da_legend';
+            }
+        }
+    </script>
+</body>
+</html></html></html></html></html>

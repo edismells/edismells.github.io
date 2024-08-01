@@ -55,9 +55,12 @@
                 document.body.style.backgroundImage = "url('Subway-sub2.jpg')";
 
             } else {
-                outputElement.textContent = 'your personality is da legend';
-                outputElement.className = 'default-result';
-                document.body.style.backgroundImage = "url('ethansmells.jpg')";
+                outputElement.textContent = 'your personality is SUB';
+                outputElement.className = 'sub-result';
+                document.body.style.backgroundImage = "url('Subway-sub2.jpg')";
+                document.body.style.backgroundRepeat = "repeat"; // Enables tiling of the image
+                document.body.style.backgroundSize = "auto"; // Keep original size for tiling
+                document.body.style.backgroundPosition = "top left"; // Start tiling from the top left
             }
         }
     </script>
